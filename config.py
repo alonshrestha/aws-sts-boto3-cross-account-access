@@ -12,5 +12,5 @@ accountConfig = {
             "id": "1234567890XX",
             "iamRoleArn": "arn:aws:iam::1234567890XX:role/role_access_account2",
             "regionList": ['us-east-1', 'us-east-2', 'us-west-1', 'us-west-2'],
-        },
+        }
 }

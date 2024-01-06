@@ -4,6 +4,10 @@ This script provides a simple Python tool (`main.py`) for accessing AWS resource
 
 ### Prerequisites
 
+Before using the script, make sure you have set up the necessary IAM roles in your source and destination AWS accounts to allow cross-account access. Follow these URLs to create an IAM role for assuming in the destination account:
+- [Providing access to an IAM user in another AWS account that you own](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_roles_common-scenarios_aws-accounts.html)
+- [IAM tutorial: Delegate access across AWS accounts using IAM roles](https://docs.aws.amazon.com/IAM/latest/UserGuide/tutorial_cross-account-with-roles.html)
+
 Ensure that you have the required Python libraries installed by running:
 
 ```bash

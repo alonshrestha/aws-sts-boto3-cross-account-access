@@ -1,2 +1,67 @@
-# aws-sts-boto3-cross-account-access
-This repository features a Python function simplifying the retrieval of temporary AWS session credentials via the Security Token Service (STS), supporting cross-account access by assuming a specified IAM role in the target AWS account.
+## AWS STS Boto3 Cross-Account Access Generator
+
+This script provides a simple Python tool (`main.py`) for accessing AWS resources in multiple accounts using AWS Security Token Service (STS) to assume cross-account roles. The tool utilizes the `boto3` library and includes configurations in the `config.py` file.
+
+### Prerequisites
+
+Ensure that you have the required Python libraries installed by running:
+
+```bash
+pip install -r requirements.txt
+```
+
+### Configuration
+
+#### `config.py`
+
+Edit the `config.py` file to include details about your AWS accounts and the roles you want to assume. Here is a sample configuration:
+
+```python
+accountList = ['Account1', 'Account2']
+
+accountConfig = {
+    "Account1": {
+        "id": "123456789012",
+        "iamRoleArn": "arn:aws:iam::123456789012:role/role_access_account2",
+        "regionList": ['us-east-1', 'us-east-2', 'us-west-1', 'us-west-2'],
+    },
+    "Account2": {
+        "id": "1234567890XX",
+        "iamRoleArn": "arn:aws:iam::1234567890XX:role/role_access_account2",
+        "regionList": ['us-east-1', 'us-east-2', 'us-west-1', 'us-west-2'],
+    }
+}
+```
+
+Make sure to replace the placeholder values with your actual AWS account IDs, IAM role ARNs, and region lists.
+
+### Usage
+
+#### Running the Script
+
+Execute the `main.py` script to assume roles and access resources in the specified AWS accounts. The script will loop through the configured accounts and print information about EC2 instances:
+
+```bash
+python3 main.py
+```
+
+### Notes
+
+- The script assumes the role specified in the `iamRoleArn` for each account.
+- AWS region defaults to 'us-east-1' but can be configured for each account in `accountConfig`.
+- The script uses AWS SDK's `boto3` library, version 1.34.14.
+
+### Dependencies
+
+- [boto3](https://pypi.org/project/boto3/) - AWS SDK for Python
+- [botocore](https://pypi.org/project/botocore/) - Low-level, data-driven core of boto3
+
+### License
+
+This project is licensed under the MIT License - see the [LICENSE](/LICENSE) file for details.
+
+### Usage Disclaimer and Considerations
+
+- This tool is a basic example and may need modifications based on specific use cases or security considerations.
+- Refer to the [boto3 documentation](https://boto3.amazonaws.com/v1/documentation/api/latest/index.html) for more information on AWS SDK for Python.
+- **Important**: Do not deploy this script in a production environment without thorough testing. Always ensure that the script meets your specific requirements and does not cause any unintended consequences.

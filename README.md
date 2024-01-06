@@ -67,5 +67,5 @@ This project is licensed under the MIT License - see the [LICENSE](/LICENSE) fil
 ### Usage Disclaimer and Considerations
 
 - This tool is a basic example and may need modifications based on specific use cases or security considerations.
-- Refer to the [boto3 documentation](https://boto3.amazonaws.com/v1/documentation/api/latest/index.html){:target="_blank"} for more information on AWS SDK for Python.
+- Refer to the [boto3 documentation](https://boto3.amazonaws.com/v1/documentation/api/latest/index.html){:target="_blank" rel="noopener"} for more information on AWS SDK for Python.
 - **Important**: Do not deploy this script in a production environment without thorough testing. Always ensure that the script meets your specific requirements and does not cause any unintended consequences.

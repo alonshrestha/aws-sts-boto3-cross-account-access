@@ -5,8 +5,8 @@ This script provides a simple Python tool (`main.py`) for accessing AWS resource
 ### Prerequisites
 
 Before using the script, make sure you have set up the necessary IAM roles in your source and destination AWS accounts to allow cross-account access. Follow these URLs to create an IAM role for assuming in the destination account:
-- [Providing access to an IAM user in another AWS account that you own](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_roles_common-scenarios_aws-accounts.html){:target="_blank"}
-- [IAM tutorial: Delegate access across AWS accounts using IAM roles](https://docs.aws.amazon.com/IAM/latest/UserGuide/tutorial_cross-account-with-roles.html){:target="_blank"}
+- [Providing access to an IAM user in another AWS account that you own](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_roles_common-scenarios_aws-accounts.html)
+- [IAM tutorial: Delegate access across AWS accounts using IAM roles](https://docs.aws.amazon.com/IAM/latest/UserGuide/tutorial_cross-account-with-roles.html)
 
 Ensure that you have the required Python libraries installed by running:
 
@@ -57,8 +57,8 @@ python3 main.py
 
 ### Dependencies
 
-- [boto3](https://pypi.org/project/boto3/){:target="_blank"} - AWS SDK for Python
-- [botocore](https://pypi.org/project/botocore/){:target="_blank"} - Low-level, data-driven core of boto3
+- [boto3](https://pypi.org/project/boto3/) - AWS SDK for Python
+- [botocore](https://pypi.org/project/botocore/) - Low-level, data-driven core of boto3
 
 ### License
 
@@ -67,5 +67,5 @@ This project is licensed under the MIT License - see the [LICENSE](/LICENSE) fil
 ### Usage Disclaimer and Considerations
 
 - This tool is a basic example and may need modifications based on specific use cases or security considerations.
-- Refer to the [boto3 documentation](https://boto3.amazonaws.com/v1/documentation/api/latest/index.html){:target="_blank" rel="noopener"} for more information on AWS SDK for Python.
+- Refer to the [boto3 documentation](https://boto3.amazonaws.com/v1/documentation/api/latest/index.html) for more information on AWS SDK for Python.
 - **Important**: Do not deploy this script in a production environment without thorough testing. Always ensure that the script meets your specific requirements and does not cause any unintended consequences.

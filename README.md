@@ -1,4 +1,4 @@
-## AWS STS Cross-Account Access Generator Using Boto3
+## AWS STS Multiple Cross-Account Access Generator Using Boto3
 
 This script provides a simple Python tool (`main.py`) for accessing AWS resources in multiple accounts using AWS Security Token Service (STS) to assume cross-account roles. The tool utilizes the `boto3` library and includes configurations in the `config.py` file.
 

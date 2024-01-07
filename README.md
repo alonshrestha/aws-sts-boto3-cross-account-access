@@ -21,7 +21,7 @@ pip install -r requirements.txt
 Edit the `config.py` file to include details about your AWS accounts and the roles you want to assume. Here is a sample configuration:
 
 ```python
-accountList = ['Account1', 'Account2']
+accountList = ['Account1']
 
 accountConfig = {
     "Account1": {
